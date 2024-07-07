@@ -272,20 +272,32 @@ nav > div > div:first-of-type a:hover:after {
   box-sizing: border-box;
   position: absolute;
   cursor: pointer;
-  background-image: url("/home/home img/banner\ 1.webp");
-  animation: slider 15s infinite linear;
+  background-image: url("/home/home img/banner\ 4.webp");
+  /* animation: slider 20s infinite linear; */
   background-size: 100% 100%;
+  animation: slider 50s 1s alternate-reverse infinite;
 }
 @keyframes slider {
   0% {
-    background-image: url("/home/home img/banner\ 2.webp");
+    background-image: url("/home/home img/banner\ 1.webp");
+    animation-delay: 1s;
   }
   /* <<<<<<< HEAD */
-  35% {
+  25% {
+    background-image: url("/home/home img/banner\ 2.webp");
+    animation-delay: 1s;
+  }
+  50% {
     background-image: url("/home/home img/banner\ 3.webp");
+    animation-delay: 1s;
   }
   75% {
     background-image: url("/home/home img/banner\ 4.webp");
+    animation-delay: 1s;
+  }
+  100% {
+    background-image: url("/home/home img/banner\ 1.webp");
+    animation-delay: 1s;
   }
 }
 /* category start here */
@@ -295,6 +307,11 @@ nav > div > div:first-of-type a:hover:after {
   align-items: center;
   width: fit-content;
   color: white;
+}
+
+.categoryUnit:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .category .categoryUnit {
   margin: 15px;
@@ -331,9 +348,9 @@ nav > div > div:first-of-type a:hover:after {
   /* grid-template-rows: repeat(1,1fr); */
   gap: 20px;
   margin: auto;
-  background-color: black;
 }
-.inner_item_container div img {
+.inner_item_container div img:hover {
+  transform: scale(1.1);
 }
 #boat_logo {
   cursor: pointer;
@@ -350,10 +367,16 @@ nav > div > div:first-of-type a:hover:after {
 .inner_item_container {
   cursor: pointer;
 }
+.inner_item_container:hover {
+  transform: scale(1.05);
+  text-align: start;
+  box-shadow: 5px 5px 15px rgb(165, 165, 165, 0.8);
+  border-radius: 20px;
+}
 
 .text_box {
   border-radius: 0px 0px 10px 10px;
-  background-color: white;
+  background-color: rgb(204, 204, 204, 0.95);
 }
 
 .text_box > div {
@@ -384,7 +407,8 @@ nav > div > div:first-of-type a:hover:after {
 .inner_item_container > div:nth-child(1) > img {
   width: 227px;
   height: 227px;
-  margin-left: 55px;
+  margin-left: 45px;
+  margin-top: 20px;
 }
 
 .description {
@@ -426,11 +450,18 @@ nav > div > div:first-of-type a:hover:after {
 .btn_add_cart {
   color: #f1f1f1;
   background-color: black;
-  padding: 11px 25px;
+  box-shadow: 5px -5px 10px rgb(78, 78, 78);
+  padding: 11px 5px;
   border-radius: 30px;
   width: 150px;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 20px;
+  border: none;
+}
+.btn_add_cart:hover {
+  transform: scale(1.1);
+  background-color: rgb(218, 218, 218);
+  color: black;
 }
 .trending_container {
   display: flex;
@@ -448,11 +479,19 @@ nav > div > div:first-of-type a:hover:after {
 .des .btn {
   color: white;
   background-color: #ff0000;
-  width: 138px;
-  height: 36px;
+  width: 200px;
+  height: 50px;
   border-width: 0px;
   border-radius: 20px;
+  box-shadow: 10px 10px 20px rgb(255, 255, 255);
   margin: auto;
+  font-size: 26px;
+}
+.des .btn:hover {
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+  background-color: #fffefe;
+  box-shadow: 10px 10px 20px rgb(255, 255, 255);
 }
 ul,
 li {
@@ -487,7 +526,7 @@ a {
 }
 a:hover {
   cursor: pointer;
-  background-color: white;
+  color: red;
 }
 .icon-container {
   font-size: 20px;
@@ -520,6 +559,9 @@ a:hover {
   max-width: 600px;
   margin: auto;
   padding: 30px;
+}
+.imgrow img {
+  border-radius: 20px;
 }
 .iconrow {
   display: flex;
@@ -611,16 +653,21 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 20px;
-  margin: auto;
+  /* margin: auto; */
 }
 .artcbtn {
   width: 150px;
   height: 36px;
   border-width: 0px;
   border-radius: 10px;
-  margin: auto;
+  bottom: 2px;
   font-size: 20px;
-  border: 1px solid red;
+}
+.artcbtn:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color: rgb(212, 212, 212);
+  color: black;
 }
 .artcbtn a {
   color: #000;
@@ -634,8 +681,9 @@ h5 {
   color: white;
 }
 .sopimg {
-  width: 90%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
 }
 
 hr {
@@ -656,8 +704,8 @@ h4 p {
 .cnnt {
   margin: auto;
   display: flex !important;
-  align-items: center;
   padding: 10px;
+  background-color: rgb(0, 0, 0);
 }
 .hedsrow {
   display: flex;
@@ -665,6 +713,7 @@ h4 p {
   height: 400px;
   padding: 10px;
   margin: auto;
+  background-color: rgb(51, 51, 51);
 }
 
 /* shopsec */
@@ -687,6 +736,7 @@ h4 p {
   gap: 20px;
   margin: auto;
   padding: 30px;
+  position: relative;
 }
 .btnshop {
   color: #000;
@@ -697,6 +747,11 @@ h4 p {
   border-radius: 15px;
   margin: auto;
   font-size: 20px;
+  position: absolute;
+  bottom: 40px;
+  margin-left: 200px;
+}
+.btnshop:hover {
 }
 .shpng a {
   color: #000;
@@ -719,7 +774,7 @@ footer {
   margin-left: 22px;
   background-color: #d5a9a9;
   /* height: 1780px; */
-  width: 97%;
+  width: auto;
   border-radius: 10px;
 }
 .col input {
